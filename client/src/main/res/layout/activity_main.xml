@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jing.aidlclient.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/editNum1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="+"
+        android:layout_weight="1"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView"
+        android:layout_below="@id/editNum1" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/editNum2"
+        android:layout_below="@+id/textView"
+        android:layout_alignRight="@+id/editNum1"
+        android:layout_alignEnd="@+id/editNum1" />
+    <TextView
+        android:text="="
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+    <EditText
+        android:id="@+id/editNum3"
+        android:layout_weight="1"
+        android:editable="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <Button
+        android:id="@+id/btn_num"
+        android:layout_weight="1"
+        android:text="计算"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>
