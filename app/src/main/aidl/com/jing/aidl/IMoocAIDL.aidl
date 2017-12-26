@@ -1,4 +1,5 @@
-package com.jing.aidltest;
+// IMoocAIDL.aidl
+package com.jing.aidl;
 
 // Declare any non-default types here with import statements
 
@@ -10,5 +11,6 @@ interface IMoocAIDL {
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
             double aDouble, String aString);
 
-            int add(int num1,int num2);
+
+     int add(int num1,int num2);
 }

@@ -1,13 +1,16 @@
-package com.jing.aidltest;
+package com.jing.server;
 
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+import com.jing.aidl.IMoocAIDL;
 
 /**
- * Created by Jing on 16/2/24.
+ * 服务器端的aidl服务
+ * @author kongjing
+ * @time 2017/12/26
  */
 public class IRemoteService extends Service {
     @Override

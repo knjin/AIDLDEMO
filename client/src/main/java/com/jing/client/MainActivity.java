@@ -13,9 +13,7 @@ import android.os.RemoteException;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import com.jing.aidltest.IMoocAIDL;
-
+import com.jing.aidl.IMoocAIDL;
 
 public class MainActivity extends Activity implements View.OnClickListener{
     private Button mBtn;
@@ -70,9 +68,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     private void bindService() {
         //绑定服务，获取服务端
-        Intent intent = new Intent();
+        Intent intent = new Intent("com.jing.server.IRemoteService");//使用action 明文访问
+        //intent.setPackage("com.jing.server");
+        //intent.setAction("com.jing.server.IRemoteService");
         //明文标识,显示绑定,5.0后
-        intent.setComponent(new ComponentName("com.jing.aidltest","com.jing.aidltest.IRemoteService"));
+        //intent.setComponent(new ComponentName("com.jing.server","com.jing.server.IRemoteService"));
         bindService(intent, coon, Context.BIND_AUTO_CREATE);
     }
 
